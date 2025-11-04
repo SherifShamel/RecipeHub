@@ -1,0 +1,18 @@
+.sample {
+  position: relative;
+}
+.sample::before {
+  content: 'Trending';
+  font-size: 25px;
+  position: absolute;
+  border-top-right-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 30%;
+  color: white;
+  background-color: #ffb30e;
+}
