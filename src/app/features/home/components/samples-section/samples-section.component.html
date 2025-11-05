@@ -1,34 +1,15 @@
 <section class="samples-sections mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <a href="#">
-                    <div class="sample rounded bg-danger-subtle">
-                        <img class="w-100" src="./assets/images/herosection-woman.svg" alt="">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <div class="sample rounded bg-danger-subtle">
-                        <img class="w-100" src="./assets/images/herosection-woman.svg" alt="">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <div class="sample rounded bg-danger-subtle">
-                        <img class="w-100" src="./assets/images/herosection-woman.svg" alt="">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#">
-                    <div class="sample rounded bg-danger-subtle">
-                        <img class="w-100" src="./assets/images/herosection-woman.svg" alt="">
-                    </div>
-                </a>
-            </div>
-        </div>
+    <div class="container-fluid">
+        <h2 class="text-center">Categories</h2>
+        <swiper-container [breakpoints]="brerakpoints" space-between=30>
+            @for (category of categories; track category.idCategory) {
+            <swiper-slide>
+                <div class="border border-4 border-danger-subtle rounded" (click)="test()">
+                    <img [src]="category.strCategoryThumb" class="w-100" [alt]="category.strCategory">
+                    <p class="text-center">{{category.strCategory}}</p>
+                </div>
+            </swiper-slide>
+            }
+        </swiper-container>
     </div>
 </section>
