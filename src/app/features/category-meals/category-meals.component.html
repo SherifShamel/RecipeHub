@@ -1,0 +1,21 @@
+<section class="bg-light-subtle">
+    <div class="container">
+        <h1 class="text-center my-3">{{mealCategory}}</h1>
+        <div class="row g-3">
+            @for (meal of meals; track meal.idMeal) {
+            <div class=" col-md-4 col-lg-3 col-sm-6">
+                <div class="card">
+                    <img src="{{meal.strMealThumb}}" class="card-img-top" alt="{{meal.strMeal}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{meal.strMeal.split(' ').slice(0,4).join(" ")}}</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p> -->
+                        <a href="#" class="btn btn-outline-primary">Check {{meal.strMeal.split(' ').slice(0,4).join("
+                            ")}}</a>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

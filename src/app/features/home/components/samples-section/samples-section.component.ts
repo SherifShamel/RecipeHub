@@ -3,13 +3,14 @@ import { MealCategoriesService } from '../../../../shared/services/meal-categori
 import { ICategories } from '../../../../core/interfaces/icategories.interface';
 import { register } from 'swiper/element/bundle';
 import { Swiper } from 'swiper/types';
+import { RouterLink } from "@angular/router";
 
 // register Swiper custom elements
 register();
 
 @Component({
   selector: 'app-samples-section',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './samples-section.component.html',
   styleUrl: './samples-section.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -30,15 +31,12 @@ export class SamplesSectionComponent implements OnInit {
       slidesPerView: 5,
     },
   };
-  test(){
-    console.log("Enta 7omar");
-    
-  }
 
   ngOnInit(): void {
     this._MealCategoriesService.getCategories().subscribe({
       next: (res) => {
         this.categories = res.categories;
+        
       },
       error: (err) => {
         console.log(err);

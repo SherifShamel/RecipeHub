@@ -12,4 +12,7 @@ export class MealCategoriesService {
   getCategories(): Observable<any> {
     return this._HttpClient.get(`${environment.baseUrl}/categories.php`);
   }
+  getMeals(category: string | null): Observable<any> {
+    return this._HttpClient.get(`${environment.baseUrl}/filter.php?c=${category}`);
+  }
 }

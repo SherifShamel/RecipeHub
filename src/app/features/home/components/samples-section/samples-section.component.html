@@ -4,7 +4,7 @@
         <swiper-container [breakpoints]="brerakpoints" space-between=30>
             @for (category of categories; track category.idCategory) {
             <swiper-slide>
-                <div class="border border-4 border-danger-subtle rounded" (click)="test()">
+                <div class="border border-4 border-danger-subtle rounded" [routerLink]="['meals',category.strCategory]">
                     <img [src]="category.strCategoryThumb" class="w-100" [alt]="category.strCategory">
                     <p class="text-center">{{category.strCategory}}</p>
                 </div>
