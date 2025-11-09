@@ -1,3 +1,15 @@
-section{
-    margin-top: 4rem;
+section {
+  margin-top: 4rem;
+}
+
+.card img {
+  min-height: 300px;
+  background-image: url('./../../../../public/assets/images/placeholder.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.my-pagination ::ng-deep .ngx-pagination {
+  margin: 0;
+  padding: 0;
 }
